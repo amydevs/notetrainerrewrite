@@ -1607,11 +1607,6 @@
   dependencies:
     source-map "^0.6.1"
 
-"@types/vexflow@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@types/vexflow/-/vexflow-3.0.1.tgz#3b249484542de9ad36fc261002552b6481ba794d"
-  integrity sha512-uocoyb4hjVJ2sBsf7Oe4gGrwOaCohGsRV6zGOmJOFUrM8iI3OkQjNS2wDjt6gCo3Kg6tf3mRNnqnDFK57TZHZA==
-
 "@types/webpack-bundle-analyzer@3.9.3":
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/@types/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.9.3.tgz#3a12025eb5d86069c30b47a157e62c0aca6e39a1"
@@ -8021,10 +8016,10 @@ vendors@^1.0.0:
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
 
-vexflow@^3.0.9:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/vexflow/-/vexflow-3.0.9.tgz#85bc89ae5224670d3837d0b34c521b9e69abc89c"
-  integrity sha512-JzDUC3SZvyRxvALv0UrlgCJSH7WzNSShNjXK0rTWqDJscCcytrTWLT3LYtsDvby8qbszdaD708xOe9D79FLTFA==
+vexflow@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/vexflow/-/vexflow-4.0.0.tgz#e4a613d9407e37aa4ab9bb6ac01f59b533713e2f"
+  integrity sha512-je367TDUfkqSsKG93bNBo43DVtuJ1xD6DwW+HciHXTo5bowX0kAPy3+Mu9POYfRUSXCg6xhwaE3hPB9L9nZZGA==
 
 vm-browserify@^1.0.1:
   version "1.1.2"

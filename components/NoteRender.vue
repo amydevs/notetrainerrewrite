@@ -1,12 +1,25 @@
 <template>
-  <div class="render" :id="dark.toString()"></div>
+  <div class="render" :id="dark.toString()" ref="noterender"></div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { Framework } from 'vuetify';
+
+import Vex from 'vexflow';
+
 export default Vue.extend({
+  mounted() {
+    const VF = Vex.Flow;
+    // Create a VexFlow renderer attaced to the DIV element "boo"
+    var renderer = new VF.Renderer((this.$refs['noterender'] as HTMLDivElement), VF.Renderer.Backends.SVG)
+
+    // Configure the rendering context.
+    renderer.resize(500, 500);
+    this.$emit('context', renderer.getContext());
+  },
   computed: {
-    dark() {
+    dark(): Boolean {
       return this.$vuetify.theme.dark;
     }
   }
