@@ -27,12 +27,12 @@ export default Vue.extend({
     },
 
     mounted() {
-        
+
         console.log(this.$refs['noterender'] as HTMLElement)
-        const VF = Vex.Flow;
+        const VF = this.$vex.Flow;
         // Create a VexFlow renderer attaced to the DIV element "boo"
         var renderer = new VF.Renderer((this.$refs['noterender'] as any)?.$el, VF.Renderer.Backends.SVG)
-        
+
         // Configure the rendering context.
         renderer.resize(500, 500);
         const context = renderer.getContext();
@@ -46,7 +46,7 @@ export default Vue.extend({
 
         // Connect it to the rendering context and draw!
         stave.setContext(context).draw();
-                
+
     }
 })
 </script>
