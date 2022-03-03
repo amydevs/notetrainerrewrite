@@ -1,6 +1,6 @@
 <template>
     <div id="inspire">
-        <NoteRenderer ref="noterender" />
+        <NoteRenderer @context="renderer = $event" />
         <div class="button-grid">
           <button class="reroll" v-for="note in notes" :key="note">{{note}}</button>
         </div>
@@ -10,8 +10,6 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import Vex from 'vexflow';
-
 import NoteRenderer from "~/components/NoteRender.vue";
 
 export default Vue.extend({
@@ -20,7 +18,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            noteRenderString: "dDAA|",
+            renderer: undefined,
             notes: ["C", "CD", "D", "DE", "E", "F", "FG", "G", "GA", "A", "AB", "B"],
             octaves: Array.from({length: 10}, (_, i) => i + 1)
         }
@@ -42,11 +40,10 @@ export default Vue.extend({
         const stave = new VF.Stave(10, 40, 400);
 
         // Add a clef and time signature.
-        stave.addClef("treble").addTimeSignature("4/4");
+        stave.addClef('treble').addTimeSignature('4/4');
 
         // Connect it to the rendering context and draw!
         stave.setContext(context).draw();
-
     }
 })
 </script>
