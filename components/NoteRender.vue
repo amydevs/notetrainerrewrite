@@ -6,11 +6,9 @@
 import Vue from 'vue'
 import { Framework } from 'vuetify';
 
-import Vex from 'vexflow';
-
 export default Vue.extend({
   mounted() {
-    const VF = Vex.Flow;
+    const VF = this.$vex.Flow;
     // Create a VexFlow renderer attaced to the DIV element "boo"
     var renderer = new VF.Renderer((this.$refs['noterender'] as HTMLDivElement), VF.Renderer.Backends.SVG)
 
