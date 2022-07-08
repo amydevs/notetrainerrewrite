@@ -68,6 +68,9 @@ export default {
       miniVariant: false,
       title: 'Vuetify.js'
     }
+  },
+  async mounted() {
+    this.$accessor.SET_USER(await this.$supabase.auth.user());
   }
 }
 </script>
