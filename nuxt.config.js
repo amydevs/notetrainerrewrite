@@ -26,7 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vexflow', ssr: false },
+    { src: '~/plugins/vexflow.ts', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,7 +42,10 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/pwa
+    ['nuxt-supabase', {
+      supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ucGhtemRwa2JteW12Z2hqY2Z5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDYyODk0MjAsImV4cCI6MTk2MTg2NTQyMH0.No3iRWht_YAkRRFEg0RGvZQigA9kOywgluHIdPunS8w',
+      supabaseUrl: 'https://mnphmzdpkbmymvghjcfy.supabase.co'
+    }],
     '@nuxtjs/pwa',
   ],
 

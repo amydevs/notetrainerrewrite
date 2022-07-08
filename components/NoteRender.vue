@@ -1,5 +1,5 @@
 <template>
-  <div class="render" :id="dark.toString()" ref="noterender"></div>
+  <div class="render" :id="dark.toString()"></div>
 </template>
 
 <script lang="ts">
@@ -8,13 +8,13 @@ import { Framework } from 'vuetify';
 
 export default Vue.extend({
   mounted() {
-    const VF = this.$vex.Flow;
-    // Create a VexFlow renderer attaced to the DIV element "boo"
-    var renderer = new VF.Renderer((this.$refs['noterender'] as HTMLDivElement), VF.Renderer.Backends.SVG)
+    // const VF = this.$vex.Flow;
+    // // Create a VexFlow renderer attaced to the DIV element "boo"
+    // var renderer = new VF.Renderer((this.$refs['noterender'] as HTMLDivElement), VF.Renderer.Backends.SVG)
 
-    // Configure the rendering context.
-    renderer.resize(500, 500);
-    this.$emit('context', renderer.getContext());
+    // // Configure the rendering context.
+    // renderer.resize(500, 500);
+    // this.$emit('context', renderer.getContext());
   },
   computed: {
     dark(): Boolean {

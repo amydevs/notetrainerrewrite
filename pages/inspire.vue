@@ -1,6 +1,6 @@
 <template>
     <div id="inspire">
-        <NoteRenderer @context="renderer = $event" />
+        <note-renderer ref="noterender" @context="renderer = $event" />
         <div class="button-grid">
           <button class="reroll" v-for="note in notes" :key="note">{{note}}</button>
         </div>
@@ -26,13 +26,12 @@ export default Vue.extend({
 
     mounted() {
 
-        console.log(this.$refs['noterender'] as HTMLElement)
-        const VF = this.$vex.Flow;
+        console.log((this.$refs['noterender'] as any).$el)
+        const VF = this.$vex;
         // Create a VexFlow renderer attaced to the DIV element "boo"
         var renderer = new VF.Renderer((this.$refs['noterender'] as any)?.$el, VF.Renderer.Backends.SVG)
 
         // Configure the rendering context.
-        renderer.resize(500, 500);
         const context = renderer.getContext();
         context.setFont("Arial", 10, 10).setBackgroundFillStyle("#eed");
 

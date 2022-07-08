@@ -1,10 +1,13 @@
 import Vue from 'vue'
-import Vex from 'vexflow'
+import { Flow } from 'vexflow'
+
+console.log(Flow);
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $vex: typeof Vex
+    $vex: typeof Flow
   }
 }
 
-Vue.prototype.$vex = Vex
+Vue.prototype.$vex = Flow
+
